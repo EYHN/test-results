@@ -2,6 +2,17 @@
 
 A series of utility macros for outputting testing results.
 
+[![](https://img.shields.io/crates/v/test-results)](https://crates.io/crates/test-results) ![](https://img.shields.io/crates/l/test-results)
+
+# Getting Started
+
+Simply add the `test-results` crate to your project's Cargo.toml like this:
+
+```
+[dependencies]
+test-results = "0"
+```
+
 # macros
 
 ## `save!(name: &str, value: &u8)`
