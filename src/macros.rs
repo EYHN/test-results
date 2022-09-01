@@ -25,3 +25,29 @@ macro_rules! save {
         )
     };
 }
+
+/// Save a test results folder
+/// 
+/// Example:
+/// 
+/// ```ignore
+/// let output_dir: PathBuf = test_results::save_dir!("test-output");
+/// ```
+/// 
+/// The folder will be saved in the `test_results` folder in the same directory as the source files.
+/// 
+/// ```text
+/// ├─ test.rs
+/// └─ test_results
+///     └─ test-output
+/// ```
+#[macro_export]
+macro_rules! save_dir {
+    ($name: expr) => {
+        $crate::_macro_support::save_dir(
+            $name.into(),
+            file!(),
+            env!("CARGO_MANIFEST_DIR")
+        )
+    };
+}
